@@ -64,9 +64,9 @@
                             <p>These encounters have fueled my passion for coding and I continuously would like to partake in more experiences that can increase my knowledge.</p>
                             <p>Feel free to connect with me through LinkedIn or through my email, cgarciacortez@mail.sfsu.edu . </p>
                                 <button onclick="showServerData();">
-                                    Get data
+                                    Fun facts button!
                                  </button>
-                                <p id="servlet-container"></p>     
+                                <ul id="servlet-container"></ul>     
 					<footer>
 						<a href="#experience" class="button large scrolly">See some of my recent work</a>
 					</footer>
@@ -142,6 +142,35 @@
 				</div>
             </article>
             <article id="contact" class="wrapper style4">
+				<div class="container medium">
+					<header>
+						<h2>Contact me!</h2>
+					</header>
+					<div class="row">
+						<div class="col-12">
+							<form action="/form-handler" method="POST">
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="text" name="email" id="email" placeholder="Email" required/>
+									</div>
+									<div class="col-12">
+										<input type="text" name="subject" id="subject" placeholder="Subject" />
+									</div>
+									<div class="col-12">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" /></li>
+											<li><input type="reset" value="Clear Form" class="alt" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</div>
 				<div class="container medium">
 						<div class="col-12">
 							<hr />
