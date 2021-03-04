@@ -30,9 +30,19 @@ function addRandomGreeting() {
 /** Fetches the current date from the server and adds it to the page. */
 async function showServerData() {
   const responseFromServer = await fetch('/hello');
-  const textFromResponse = await responseFromServer.text();
+  const textFromResponse = await responseFromServer.json();
 
-  const dateContainer = document.getElementById('servlet-container');
-  dateContainer.innerText = textFromResponse;
+  const funFact = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
+
+  const factContainer = document.getElementById('servlet-container');
+  factContainer.innerText = funFact;
+
+
 }
 
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
