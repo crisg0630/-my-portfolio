@@ -26,3 +26,13 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+/** Fetches the current date from the server and adds it to the page. */
+async function showServerData() {
+  const responseFromServer = await fetch('/hello');
+  const textFromResponse = await responseFromServer.text();
+
+  const dateContainer = document.getElementById('servlet-container');
+  dateContainer.innerText = textFromResponse;
+}
+
