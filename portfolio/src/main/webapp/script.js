@@ -27,7 +27,7 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
-/** Fetches the current date from the server and adds it to the page. */
+/** Fetches fun facts from the server and adds it to the page. */
 async function showServerData() {
   const responseFromServer = await fetch('/hello');
   const textFromResponse = await responseFromServer.json();
@@ -40,9 +40,33 @@ async function showServerData() {
 
 }
 
+/**Translates parts of my page */
+ function requestTranslation() {
+        const textContent = document.getElementById('about');
+        const text = textContent.textContent;
+        const languageCode = document.getElementById('language').value;
+
+        const resultContainer = document.getElementById('about');
+        resultContainer.innerText = 'Loading...';
+
+        const params = new URLSearchParams();
+        params.append('text', text);
+        params.append('languageCode', languageCode);
+
+        fetch('/translate', {
+          method: 'POST',
+          body: params
+        }).then(response => response.text())
+        .then((translatedMessage) => {
+          resultContainer.innerText = translatedMessage;
+        });
+      }
+
+
 /** Creates an <li> element containing text. */
 function createListElement(text) {
   const liElement = document.createElement('li');
   liElement.innerText = text;
   return liElement;
 }
+

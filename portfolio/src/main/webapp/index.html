@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="style.css">
        <script src="/script.js"></script>
 	</head>
 	<body class="is-preload">
@@ -51,6 +52,7 @@
                         <h2>More about me!</h2>
                     </header>
                     <footer>
+                       <div id="about">
                     <p>I've been interested in coding since my sophomore year of high school. 
                         The following two years consisted of me creating, promoting, and gathering funding for coding and robotics clubs at my high school. I built on this experience during my freshman year of college when 
                         I co-founded a program that helps teach high school students how to code. This program took place at the high school that I graduated from, John Henry High School, in Richmond, California.</p>
@@ -62,14 +64,26 @@
                             We went from not knowing anything about building robots to being able to create a fully functional autonomous robot in a matter of a few weeks and ended up being finishing 6th out of 21 high schools in the qualifying rounds. I ended up winning the Pioneers in Engineering scholarship as well.</p>
                         
                             <p>These encounters have fueled my passion for coding and I continuously would like to partake in more experiences that can increase my knowledge.</p>
+                            
                             <p>Feel free to connect with me through LinkedIn or through my email, cgarciacortez@mail.sfsu.edu . </p>
+                              </div>
                                 <button onclick="showServerData();">
                                     Random fun facts about me!
                                  </button>
-                                <ul id="servlet-container"></ul>     
+                                <ul id="servlet-container"></ul> 
+                                    <select id="language">
+                                    <option value="en">English</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="zh">Chinese</option>
+                                    <option value="pt">Portuguese</option>
+                                    <option value="hi">Hindi</option>
+                                    <option value="ar">Arabic</option>
+                                    </select>
+
+                        <button onclick="requestTranslation();">Translate</button>
 					<footer>
 						<a href="#experience" class="button large scrolly">See some of my recent work</a>
-					</footer>
+                    </footer>
 				</div>
 			</article>
 
