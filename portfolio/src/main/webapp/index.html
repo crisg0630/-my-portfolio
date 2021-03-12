@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="style.css">
        <script src="/script.js"></script>
 	</head>
 	<body class="is-preload">
@@ -51,6 +52,7 @@
                         <h2>More about me!</h2>
                     </header>
                     <footer>
+                       <div id="about">
                     <p>I've been interested in coding since my sophomore year of high school. 
                         The following two years consisted of me creating, promoting, and gathering funding for coding and robotics clubs at my high school. I built on this experience during my freshman year of college when 
                         I co-founded a program that helps teach high school students how to code. This program took place at the high school that I graduated from, John Henry High School, in Richmond, California.</p>
@@ -62,14 +64,26 @@
                             We went from not knowing anything about building robots to being able to create a fully functional autonomous robot in a matter of a few weeks and ended up being finishing 6th out of 21 high schools in the qualifying rounds. I ended up winning the Pioneers in Engineering scholarship as well.</p>
                         
                             <p>These encounters have fueled my passion for coding and I continuously would like to partake in more experiences that can increase my knowledge.</p>
-                            <p>Feel free to connect with me through LinkedIn or through my email, cgarciacortez@mail.sfsu.edu . </p>
+                            
+                            <p>Feel free to connect with me through LinkedIn, my email, cgarciacortez@mail.sfsu.edu, or the contact form at the bottom of this page. </p>
+                              </div>
                                 <button onclick="showServerData();">
                                     Random fun facts about me!
                                  </button>
-                                <ul id="servlet-container"></ul>     
+                                <ul id="servlet-container"></ul> 
+                                    <select id="language">
+                                    <option value="en">English</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="zh">Chinese</option>
+                                    <option value="pt">Portuguese</option>
+                                    <option value="hi">Hindi</option>
+                                    <option value="ar">Arabic</option>
+                                    </select>
+
+                        <button onclick="requestTranslation();">Translate</button>
 					<footer>
 						<a href="#experience" class="button large scrolly">See some of my recent work</a>
-					</footer>
+                    </footer>
 				</div>
 			</article>
 
@@ -83,10 +97,10 @@
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a class="image featured"><img src="images/proj v full tr.png" alt="Project Victoria" /></a>
-                                <h3>Project Victoria President</h3>
+                                <h3>Project Victoria Co-founder</h3>
                                 <h5>April 2020 - Present</h5>
-								<p>Project Victoria is a program that I co-founded 
-                                that teaches students at John Henry High School in Richmond, California that teaches them different 
+								<p>Project Victoria is a program
+                                  that teaches students at John Henry High School in Richmond, California different 
                                 programming languages including Java, HTML, CSS, and JavaScript.</p>
 							</article>
 						</div>
@@ -113,7 +127,7 @@
 								<a href="https://pioneers.berkeley.edu/" target="_blank" class="image featured"><img src="images/pie.png" alt="Pioneers in Engineering/Robotics Club" /></a>
                                 <h3><a href="https://pioneers.berkeley.edu/blog/2019/06/17/scholarship-winners-2019" target="_blank" >Pioneers in Engineering (PiE)</a></h3>
                                 <h5>January 2019 - June 2019</h5>
-								<p>Recruited members for a robotics team at my high school in order to participate in the Spring 2019 Pioneers in Engineering robotics competition.
+								<p> I recruited members for a robotics team at my high school in order to participate in the Spring 2019 Pioneers in Engineering robotics competition.
                                     I helped create code in Python that was able to control a robot autonomously. We placed 6th out 
                                 of 21 schools in the qualifying round and I won the 2019 PiE Scholarship which was given out to 1 senior
                             that was participating in the competition. </p>
@@ -124,7 +138,7 @@
 								<a class="image featured"><img src="images/codeworks.png" alt="CodeWorks" /></a>
                                 <h3>CodeWorks</h3>
                                 <h5>January 2019 - June 2019</h5>
-								<p>Collaborated with a team of 5 people to create a website using HTML and GitHub to spread awareness about
+								<p>I collaborated with a team of 5 people to create a website using HTML and GitHub to spread awareness about
                                 gentrification in the city of Richmond, California. This website was then presented to city officials.</p>
 							</article>
 						</div>
@@ -133,7 +147,7 @@
 								<a href="https://jhhs.amethodschools.org/" target="_blank" class="image featured"><img src="images/jhhs.gif" alt="Coding Club Founder and President" /></a>
                                 <h3>Coding Club Founder</h3>
                                  <h5>January 2018 - June 2018</h5>
-								<p>Created a coding club at my high school to introduce coding students who were curious about the field, but do not have the basic resources necessary to learn about it.
+								<p>I created a coding club at my high school to introduce coding to students that were curious about the field, but did not have the basic resources necessary to learn about it.
                                      I taught 10 students the basics of Python and planned out weekly lesson topics. We also became the first student created club in my high schools history to obtain funding 
                                      when we obtained funding for Raspberry Pi kits</p>
 							</article>
@@ -183,6 +197,8 @@
                         </div>
 				</div>
 					</div>
+                </div>
+                </div>
 					<footer>
 						<ul id="copyright">
 							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>

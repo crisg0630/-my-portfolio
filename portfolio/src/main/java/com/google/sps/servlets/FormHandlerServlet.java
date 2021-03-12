@@ -19,7 +19,7 @@ public class FormHandlerServlet extends HttpServlet {
     String message = request.getParameter("message");
 
     // Print the value so you can see it in the server logs.
-    System.out.println("User submitted: " + "Name: " + name + ", Email:" + email +
+    System.out.println("User submitted: " + "Name: " + name + ", Email: " + email +
      ", Subject: " + subject + ", Message: " + message);
 
     // Write the value to the response so the user can see it.
